@@ -1,12 +1,14 @@
 resource_group_name      = "tf-resources"
-location                 = "East US"
+location                 = ["East US", "West US", "Central US"]
 environment              = "dev"
-storage_account_name     = "leaningtfstorage"
-account_tier             = "Standard"
-account_replication_type = "LRS"
-project                  = "Terraform"
-owner                    = "Anil Karna"
-cost_center              = "IT"
-created_by               = "Terraform"
+
 subscription_id          = "afecb165-21e7-4d29-9c62-d58935fa2a21"
-key                      = "dev.terraform.tfstate"
+storage_disk_size_gb     = 30
+is_deleted               = true
+resource_tags = {
+  environment = "development"
+  project     = "Terraform"
+  owner       = "Anil Karna"
+  cost_center = "Azure Learning"
+  created_by  = "Terraform"
+}
