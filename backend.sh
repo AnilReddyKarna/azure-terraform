@@ -1,7 +1,6 @@
-
 #!/bin/bash
 RESOURCE_GROUP_NAME=tfstatelearning
-STORAGE_ACCOUNT_NAME=tfstate$RandomString
+STORAGE_ACCOUNT_NAME=tfstate$RANDOM
 LOCATION=eastus
 CONTAINER_NAME=tfstate
 
@@ -15,5 +14,3 @@ az storage account create --name $STORAGE_ACCOUNT_NAME \
 # Create a blob container
 az storage container create --name $CONTAINER_NAME \
     --account-name $STORAGE_ACCOUNT_NAME --public-access off
-
-

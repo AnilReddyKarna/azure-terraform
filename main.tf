@@ -39,9 +39,9 @@ resource "azurerm_virtual_machine" "virtual_machine" {
   storage_image_reference {
     publisher = var.vm_configuration.publisher
     offer     = var.vm_configuration.offer
-    sku       = var.vm_configuration.sku  
+    sku       = var.vm_configuration.sku
     version   = var.vm_configuration.version
-  
+
   }
   storage_os_disk {
     name              = "myosdisk1"
