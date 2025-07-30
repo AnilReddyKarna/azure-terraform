@@ -111,3 +111,15 @@ variable "resource_tags" {
     created_by  = "terraform"
   }
 }
+variable "client_id" {
+  type        = string
+  description = "The client ID for the Azure service principal"
+}
+variable "client_secret" {
+  type        = string
+  description = "The client secret for the Azure service principal"
+}
+variable "tenant_id" {
+  type        = string
+  description = "The tenant ID for the Azure service principal"
+}
